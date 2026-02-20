@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -14,6 +16,7 @@ import org.springframework.stereotype.Component;
 
 import hlth.gov.bc.ca.hapiValidator.service.FileService;
 import hlth.gov.bc.ca.hapiValidator.service.HAPIValidatorService;
+import hlth.gov.bc.ca.hapiValidator.util.Consts;
 
 @Component
 public class HAPIValidatorRunner implements CommandLineRunner {
@@ -36,18 +39,21 @@ public class HAPIValidatorRunner implements CommandLineRunner {
             System.err.println("Input path does not exist or is not a directory: " + inputPath);
             return;
         }
+        String outputFilename = "validation_results_" + Consts.DATE_FORMAT.format(Date.from(Instant.now())) + ".txt";
+        
         try (Stream<Path> stream = Files.walk(path)) {
             stream.filter(Files::isRegularFile)
                   .filter(file -> file.toString().endsWith(".json"))
+                  .sorted((file1, file2) -> file1.toString().compareTo(file2.toString()))
                   .forEach(file -> {
-                String fileName = file.getFileName().toString();
-                System.out.println("Processing file: " + fileName);
-                String message = fileService.readMessage(fileName);
+                String inputFilename = file.getFileName().toString();
+                System.out.println("Processing file: " + inputFilename);
+                String message = fileService.readMessage(inputFilename);
                 if (message != null) {
                     List<String> validationResults = hapiValidatorService.validate(message);
-                    fileService.writeResults("validation_results.txt", fileName, validationResults);
+                    fileService.writeResults(outputFilename, inputFilename, validationResults);
                 } else {
-                    System.err.println("Failed to read message from file: " + fileName);
+                    System.err.println("Failed to read message from file: " + inputFilename);
                 }
             });
             System.out.println("Validation completed for all files in the directory.");

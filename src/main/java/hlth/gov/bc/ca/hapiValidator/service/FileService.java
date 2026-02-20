@@ -16,6 +16,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
+import hlth.gov.bc.ca.hapiValidator.util.Consts;
+
 @Service
 public class FileService {
 
@@ -54,9 +56,9 @@ public class FileService {
     public void writeResults(String fileName, String inputFileName, List<String> validationResults) {
         try {
             Path path = Paths.get(outputPath + "/" + fileName);
-            Files.writeString(path, "\n" + inputFileName + ":\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+            Files.writeString(path, "\n" + inputFileName + ":\n" + Consts.LINE_SEPARATOR, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             Files.write(path, validationResults, StandardOpenOption.APPEND);
-            Files.writeString(path, "-------------------------\n", StandardOpenOption.APPEND);
+            Files.writeString(path, Consts.LINE_SEPARATOR, StandardOpenOption.APPEND);
 
         } catch (InvalidPathException | IOException ex) {
             ex.printStackTrace();
