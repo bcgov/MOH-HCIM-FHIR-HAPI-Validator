@@ -44,6 +44,7 @@ public class HAPIValidatorRunner implements CommandLineRunner {
         try (Stream<Path> stream = Files.walk(path)) {
             stream.filter(Files::isRegularFile)
                   .filter(file -> file.toString().endsWith(".json"))
+                  .sorted((file1, file2) -> file1.toString().compareTo(file2.toString()))
                   .forEach(file -> {
                 String inputFilename = file.getFileName().toString();
                 System.out.println("Processing file: " + inputFilename);
