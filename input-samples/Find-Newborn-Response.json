@@ -1,0 +1,433 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:b1e1a8b1-c1db-4d85-816d-a6163f2286b3"
+   },
+   "type" : "searchset",
+   "timestamp" : "2026-02-24T12:41:43.9818438-08:00",
+   "total" : 2,
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:5ee517fd-8e4e-40af-93be-e1913c4052b7"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/$FindCandidates"
+      }
+   ],
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:7bd592cc-b52f-425b-b30a-23dc3d3e937e",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "19.HIBC Find Candidates - "
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-02-24T11:41:38-08:00"
+               },
+               {
+                  "name" : "identifiersOnly",
+                  "valueBoolean" : false
+               },
+               {
+                  "name" : "requestMessageId",
+                  "valueString" : "5ee517fd-8e4e-40af-93be-e1913c4052b7"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:5ee517fd-8e4e-40af-93be-e1913c4052b7",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.FC.0.0012"
+                        }
+                     ],
+                     "text" : "The search completed successfully."
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "outcome"
+         }
+      },
+      {
+         "fullUrl" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+         "resource" : {
+            "resourceType" : "Patient",
+            "id" : "XXXXXXXXXX",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "MOH Client Registry - MOH_CRS"
+                  }
+               }
+            ],
+            "active" : true,
+            "name" : [
+               {
+                  "use" : "usual",
+                  "family" : "Tyer",
+                  "given" : [
+                     "Baby Boy"
+                  ],
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               }
+            ],
+            "telecom" : [
+               {
+                  "system" : "phone",
+                  "value" : "496-760-4134",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "849-982-9619",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "401-877-2189",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Cheryl4706@Causeway.com",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Tyer8674@Causeway.com",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Phung4760@Causeway.com",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               }
+            ],
+            "gender" : "male",
+            "_gender" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T12:41:38-08:00"
+                     }
+                  }
+               ]
+            },
+            "birthDate" : "2026-02-24",
+            "_birthDate" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T12:41:38-08:00"
+                     }
+                  }
+               ]
+            },
+            "address" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "unknown"
+                     }
+                  ],
+                  "type" : "physical",
+                  "line" : [
+                     "8785 Causeway"
+                  ],
+                  "city" : "Comox",
+                  "state" : "BC",
+                  "postalCode" : "V7G 1Z8",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "unknown"
+                     }
+                  ],
+                  "type" : "postal",
+                  "line" : [
+                     "7482 Loop"
+                  ],
+                  "city" : "Bralorne",
+                  "state" : "BC",
+                  "postalCode" : "V1M 1E6",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+         "resource" : {
+            "resourceType" : "Patient",
+            "id" : "XXXXXXXXXX",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "MOH Client Registry - MOH_CRS"
+                  }
+               }
+            ],
+            "active" : true,
+            "name" : [
+               {
+                  "use" : "usual",
+                  "family" : "Tyer",
+                  "given" : [
+                     "Cheryl",
+                     "Caren",
+                     "Lynette"
+                  ],
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "use" : "nickname",
+                  "given" : [
+                     "Phung"
+                  ],
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               }
+            ],
+            "telecom" : [
+               {
+                  "system" : "phone",
+                  "value" : "496-760-4134",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "849-982-9619",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "401-877-2189",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Cheryl4706@Causeway.com",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Tyer8674@Causeway.com",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Phung4760@Causeway.com",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T12:41:38-08:00"
+                  }
+               }
+            ],
+            "gender" : "female",
+            "_gender" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T12:41:38-08:00"
+                     }
+                  }
+               ]
+            },
+            "birthDate" : "1999-11-28",
+            "_birthDate" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T12:41:38-08:00"
+                     }
+                  }
+               ]
+            },
+            "address" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "invalid"
+                     }
+                  ],
+                  "type" : "physical",
+                  "line" : [
+                     "8785 Causeway"
+                  ],
+                  "city" : "Comox",
+                  "state" : "BC",
+                  "postalCode" : "V7G 1Z8",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T12:42:38-08:00"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "invalid"
+                     }
+                  ],
+                  "type" : "postal",
+                  "line" : [
+                     "7482 Loop"
+                  ],
+                  "city" : "Bralorne",
+                  "state" : "BC",
+                  "postalCode" : "V1M 1E6",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T12:42:38-08:00"
+                  }
+               }
+            ],
+            "link" : [
+               {
+                  "other" : {
+                     "reference" : "urn:uuid:3f7d9056-d587-4e5e-b888-63a0bbf37219"
+                  },
+                  "type" : "seealso"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:3f7d9056-d587-4e5e-b888-63a0bbf37219",
+         "resource" : {
+            "resourceType" : "RelatedPerson",
+            "patient" : {
+               "reference" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX"
+            },
+            "relationship" : [
+               {
+                  "coding" : [
+                     {
+                        "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                        "code" : "NMTH"
+                     }
+                  ]
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "include"
+         }
+      }
+   ]
+}

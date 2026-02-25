@@ -1,0 +1,104 @@
+{
+  "resourceType": "Bundle",
+  "id": "Bundle-AddPatient-Request-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-request-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-02-24T12:10:51-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$AddPatient"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "Parameters-AddPatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "25. Force Create - 2026-02-24T12:10:51-08:00"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2026-02-24T12:10:51-08:00"
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "value": "MOH_CRS"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+              "value": "username@idir"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-AddPatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-eweb-phn-source-patient-id",
+            "_value": {
+            	"extension":[
+            	  {
+            	  	"url": "http://hl7.org/fhir/valueset-data-absent-reason.html",
+            	  	"valuecode": "unknown"
+            	  }
+            	]
+            }
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": "Gribble",
+            "given": [
+              "Mikel"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1972-03-23",
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "8157 Parker Nene"
+            ],
+            "city": "Osoyoos",
+            "state": "BC",
+            "postalCode": "V5K 1G4",
+            "country": "CA"
+          }
+        ]
+      }
+    }
+  ]
+}

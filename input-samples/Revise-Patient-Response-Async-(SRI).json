@@ -1,0 +1,75 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:6ebe002f-6c20-45cc-8a60-19ac6098b81e"
+   },
+   "type" : "collection",
+   "timestamp" : "2026-02-24T12:36:11.4571198-08:00",
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:f72ed862-bbf5-4f72-a9d1-a069e1fe3767"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Asynchronous/Patient/$RevisePatient"
+      }
+   ],
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:f0a51086-96e4-4257-bb4e-c1274d5c0da0",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "bf3d336689c44c388e33e150b04e1420FHIR"
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-02-24T11:36:01-08:00"
+               },
+               {
+                  "name" : "requestMessageId",
+                  "valueString" : "f72ed862-bbf5-4f72-a9d1-a069e1fe3767"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:f72ed862-bbf5-4f72-a9d1-a069e1fe3767",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.RP.0.0007"
+                        }
+                     ],
+                     "text" : "The Revise Person request has been accepted for processing."
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "outcome"
+         }
+      }
+   ]
+}

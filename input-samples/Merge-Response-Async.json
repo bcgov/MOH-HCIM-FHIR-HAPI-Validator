@@ -1,0 +1,26 @@
+{
+   "resourceType" : "Parameters",
+   "parameter" : [
+      {
+         "name" : "outcome",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.PM.0.0007"
+                        }
+                     ],
+                     "text" : "The Person Merge request has been accepted for processing."
+                  }
+               }
+            ]
+         }
+      }
+   ]
+}
