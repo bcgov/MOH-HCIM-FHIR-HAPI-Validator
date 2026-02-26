@@ -1,0 +1,242 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:46b6396a-398e-4de4-ba49-4f614800530e"
+    },
+    "type": "collection",
+    "timestamp": "2026-02-26T10:05:56.0313204-08:00",
+    "link": [
+        {
+            "relation": "self",
+            "url": "urn:uuid:0d1aac27-c235-470c-9f1d-dcb77b9f61a8"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:0d1aac27-c235-470c-9f1d-dcb77b9f61a8",
+            "resource": {
+                "resourceType": "Parameters",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+                    ]
+                },
+                "parameter": [
+                    {
+                        "name": "messageId",
+                        "valueString": "8c416d813c93457aa0a7bdf9e16cad01"
+                    },
+                    {
+                        "name": "messageDateTime",
+                        "valueDateTime": "2026-02-26T10:51:40-08:00"
+                    },
+                    {
+                        "name": "eventType",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                                    "code": "PHN"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://hd4.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "XXXXXXXXXX",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-viha-cer-source-patient-id",
+                        "value": "XXXXXXXXXXXXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T10:05:52-08:00"
+                        },
+                        "assigner": {
+                            "display": "VIHA Cerner"
+                        }
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "usual",
+                        "family": "Chatman",
+                        "given": [
+                            "Perry",
+                            "Eloy",
+                            "Horace"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    },
+                    {
+                        "use": "nickname",
+                        "given": [
+                            "Oswaldo"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "979-471-8340",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "827-486-8316",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "661-494-3998",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Eloy7246@Row.com",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Chatman8073@Row.com",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Perry8171@Row.com",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T10:51:40-08:00"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "1948-02-12",
+                "_birthDate": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T10:51:40-08:00"
+                            }
+                        }
+                    ]
+                },
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "physical",
+                        "line": [
+                            "8644 Sterling Park",
+                            "Rural Route 8902",
+                            "PO Box 6338"
+                        ],
+                        "city": "Keats Island",
+                        "state": "BC",
+                        "postalCode": "V7G 1B2",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "postal",
+                        "line": [
+                            "1411 Mckinley Row",
+                            "Rural Route 8811",
+                            "PO Box 5755"
+                        ],
+                        "city": "Belcarra",
+                        "state": "BC",
+                        "postalCode": "V8N 1L6",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T10:51:40-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

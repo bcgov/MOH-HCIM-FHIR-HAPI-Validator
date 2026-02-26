@@ -1,0 +1,225 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:94d91fd2-df5e-4f7d-a6c5-9f995220c809"
+    },
+    "type": "collection",
+    "timestamp": "2026-02-26T11:39:30.4870716-08:00",
+    "link": [
+        {
+            "relation": "self",
+            "url": "urn:uuid:def9aaec-18c2-432a-be4e-ed5b5fb22a55"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:def9aaec-18c2-432a-be4e-ed5b5fb22a55",
+            "resource": {
+                "resourceType": "Parameters",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+                    ]
+                },
+                "parameter": [
+                    {
+                        "name": "messageId",
+                        "valueString": "020f85e5f75e484bab91b218d96e3ef1"
+                    },
+                    {
+                        "name": "messageDateTime",
+                        "valueDateTime": "2026-02-26T11:25:12-08:00"
+                    },
+                    {
+                        "name": "eventType",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                                    "code": "NEW"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://hd4.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "XXXXXXXXXX",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "usual",
+                        "family": "Walkowiak",
+                        "given": [
+                            "Archie",
+                            "Fidel",
+                            "Arnold"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "use": "nickname",
+                        "given": [
+                            "Elbert"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "800-340-4518",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "841-714-5813",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "713-516-2271",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Fidel366@Spur.com",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Walkowiak3534@Spur.com",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Archie9607@Spur.com",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T11:25:12-08:00"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "1977-08-26",
+                "_birthDate": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T11:25:12-08:00"
+                            }
+                        }
+                    ]
+                },
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "physical",
+                        "line": [
+                            "2505 Joost Road",
+                            "Rural Route 3211",
+                            "PO Box 8449"
+                        ],
+                        "city": "Likely",
+                        "state": "BC",
+                        "postalCode": "V7G 1Y9",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "postal",
+                        "line": [
+                            "580 Wawona Spur",
+                            "Rural Route 6084",
+                            "PO Box 1689"
+                        ],
+                        "city": "Cortes Island",
+                        "state": "BC",
+                        "postalCode": "V3R 1N3",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
