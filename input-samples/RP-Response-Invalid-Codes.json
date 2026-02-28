@@ -1,0 +1,124 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:873aaf29-a68c-44dd-b123-ccfc905c3a7e"
+   },
+   "type" : "collection",
+   "timestamp" : "2026-02-24T12:36:30.1297122-08:00",
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:27d4e16e-bff1-47bc-9c60-88a567bf4c69"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/$RevisePatient"
+      }
+   ],
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:a30ebcc6-f6ea-467f-9360-a2a79c41f768",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "10.Create a PHNBound record HIAL Services - 2026-02-24T11:36:27-08:00"
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-02-24T10:36:27-08:00"
+               },
+               {
+                  "name" : "requestMessageId",
+                  "valueString" : "27d4e16e-bff1-47bc-9c60-88a567bf4c69"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:27d4e16e-bff1-47bc-9c60-88a567bf4c69",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.RP.?.????"
+                        }
+                     ],
+                     "text" : "Transaction processed.A new PHN was assigned."
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "outcome"
+         }
+      },
+      {
+         "fullUrl" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+         "resource" : {
+            "resourceType" : "Patient",
+            "id" : "XXXXXXXXX",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "other"
+                     }
+                  ],
+                  "use" : "usual",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T10:36:27-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "MOH Client Registry - MOH_CRS"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "unavailable"
+                     }
+                  ],
+                  "use" : "somekindofid",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T10:36:27-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "HIBC - Health Insurance British Columbia MSP"
+                  }
+               }
+            ],
+            "active" : true
+         }
+      }
+   ]
+}

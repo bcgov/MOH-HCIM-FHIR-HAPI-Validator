@@ -1,0 +1,268 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:7d9a752e-a8ae-46fb-aa5d-917672edd7af"
+   },
+   "type" : "searchset",
+   "timestamp" : "2026-02-24T12:42:07.5396307-08:00",
+   "total" : 1,
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:0f59f944-63f0-4dd5-8c27-0569c27787c5"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/$FindCandidates"
+      }
+   ],
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:d0547ce9-ab4a-4c50-ac78-d08966cebf88",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "21.Find Candidate - 2026-02-24T11:42:01-08:00FC"
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-03-03T12:42:01-08:00"
+               },
+               {
+                  "name" : "identifiersOnly",
+                  "valueBoolean" : false
+               },
+               {
+                  "name" : "requestMessageId",
+                  "valueString" : "0f59f944-63f0-4dd5-8c27-0569c27787c5"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:0f59f944-63f0-4dd5-8c27-0569c27787c5",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.FC.0.0012"
+                        }
+                     ],
+                     "text" : "The search completed successfully."
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "outcome"
+         }
+      },
+      {
+         "fullUrl" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+         "resource" : {
+            "resourceType" : "Patient",
+            "id" : "XXXXXXXXXX",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "MOH Client Registry - MOH_CRS"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+                  "value" : "XXXXXXXXXXXXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "FHA Fraser Health Meditech - FHA_MT"
+                  }
+               }
+            ],
+            "active" : true,
+            "name" : [
+               {
+                  "use" : "usual",
+                  "family" : "Crossett",
+                  "given" : [
+                     "Reed",
+                     "Donny",
+                     "Arden"
+                  ],
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               },
+               {
+                  "use" : "nickname",
+                  "given" : [
+                     "Duncan"
+                  ],
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               }
+            ],
+            "telecom" : [
+               {
+                  "system" : "phone",
+                  "value" : "254-398-1794",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "692-443-2374",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "690-307-9272",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Donny8609@Drive.com",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Crossett9195@Drive.com",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Reed4898@Drive.com",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T10:41:55-08:00"
+                  }
+               }
+            ],
+            "gender" : "male",
+            "_gender" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T10:41:55-08:00"
+                     }
+                  }
+               ]
+            },
+            "birthDate" : "1982-12-04",
+            "_birthDate" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T10:41:55-08:00"
+                     }
+                  }
+               ]
+            },
+            "address" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "invalid"
+                     }
+                  ],
+                  "type" : "physical",
+                  "line" : [
+                     "8626 Italy Gardens"
+                  ],
+                  "city" : "Avola",
+                  "state" : "BC",
+                  "postalCode" : "V3R 0X6",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T10:42:55-08:00"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "invalid"
+                     }
+                  ],
+                  "type" : "postal",
+                  "line" : [
+                     "4830 Restani Drive"
+                  ],
+                  "city" : "Slocan City",
+                  "state" : "BC",
+                  "postalCode" : "V5K 1E8",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T10:42:55-08:00"
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "match",
+            "score" : 129
+         }
+      }
+   ]
+}

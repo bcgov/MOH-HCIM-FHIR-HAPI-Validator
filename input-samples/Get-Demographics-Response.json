@@ -1,0 +1,264 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-search-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:fe79ab15-a41e-49e0-8935-3c778b8b736c"
+   },
+   "type" : "searchset",
+   "timestamp" : "2026-02-24T12:48:30.2092412-08:00",
+   "total" : 1,
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:ec1f9cfb-abd6-42e3-8615-47e72c97719e"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/$GetDemographics"
+      }
+   ],
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:f50b233a-f8c6-4a4c-bbe8-db841c7f897a",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "bf3d336689c44c388e33e150b04e1420"
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-02-24T11:36:01-08:00"
+               },
+               {
+                  "name" : "history",
+                  "valueBoolean" : false
+               },
+               {
+                  "name" : "requestMessageId",
+                  "valueString" : "ec1f9cfb-abd6-42e3-8615-47e72c97719e"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:ec1f9cfb-abd6-42e3-8615-47e72c97719e",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.GD.0.0013"
+                        }
+                     ],
+                     "text" : "The get demographics query completed successfully."
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "outcome"
+         }
+      },
+      {
+         "fullUrl" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+         "resource" : {
+            "resourceType" : "Patient",
+            "id" : "XXXXXXXXXX",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "MOH Client Registry - MOH_CRS"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+                  "value" : "XXXXXXXXXXXXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "FHA Fraser Health Meditech - FHA_MT"
+                  }
+               }
+            ],
+            "active" : true,
+            "name" : [
+               {
+                  "use" : "usual",
+                  "family" : "Connolly",
+                  "given" : [
+                     "Mitchell",
+                     "Valentine",
+                     "Laurence"
+                  ],
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               },
+               {
+                  "use" : "nickname",
+                  "given" : [
+                     "Benito"
+                  ],
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               }
+            ],
+            "telecom" : [
+               {
+                  "system" : "phone",
+                  "value" : "4765591545",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "4418299848",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               },
+               {
+                  "system" : "phone",
+                  "value" : "3304289643",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Valentine3487@Pathway.com",
+                  "use" : "mobile",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Connolly4927@Pathway.com",
+                  "use" : "home",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               },
+               {
+                  "system" : "email",
+                  "value" : "Mitchell4299@Pathway.com",
+                  "use" : "work",
+                  "period" : {
+                     "start" : "2026-02-24T11:36:01-08:00"
+                  }
+               }
+            ],
+            "gender" : "male",
+            "_gender" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T11:36:01-08:00"
+                     }
+                  }
+               ]
+            },
+            "birthDate" : "1957-10-10",
+            "_birthDate" : {
+               "extension" : [
+                  {
+                     "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                     "valuePeriod" : {
+                        "start" : "2026-02-24T11:36:01-08:00"
+                     }
+                  }
+               ]
+            },
+            "address" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "invalid"
+                     }
+                  ],
+                  "type" : "physical",
+                  "line" : [
+                     "2372 Sears Row"
+                  ],
+                  "city" : "New Denver",
+                  "state" : "BC",
+                  "postalCode" : "V8N 2A7",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T11:37:01-08:00"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                        "valueCode" : "invalid"
+                     }
+                  ],
+                  "type" : "postal",
+                  "line" : [
+                     "2114 Brush Pathway"
+                  ],
+                  "city" : "Revelstoke",
+                  "state" : "BC",
+                  "postalCode" : "V5K 1S1",
+                  "country" : "CA",
+                  "period" : {
+                     "start" : "2026-02-24T11:37:01-08:00"
+                  }
+               }
+            ]
+         }
+      }
+   ]
+}

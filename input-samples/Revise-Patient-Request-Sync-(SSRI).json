@@ -1,0 +1,152 @@
+{
+  "resourceType": "Bundle",
+  "id": "Bundle-RevisePatient-Request-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-02-24T11:52:23-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$RevisePatient"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "Parameters-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "07.HA Add New Client via HIAL facing secured with SSSRI - 2026-02-24T11:52:23-08:00"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2026-02-24T10:52:23-08:00"
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "value": "FHA"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+              "value": "username@idir"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+            "value": "XXXXXXXXXXXXXXXXXXXX"
+          },
+          {
+            "use": "secondary",
+            "system": "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-hos-source-patient-id",
+            "value": "XXXXXXXXXX"
+          }         
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": "Vidrio",
+            "given": [
+              "Rufus",
+              "Weldon",
+              "Don"
+            ]
+          },
+          {
+            "use": "nickname",
+            "given": [
+              "Coy"
+            ]
+          }          
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "2459469208",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "3138984470",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "3922287778",
+            "use": "mobile"
+          },                    
+          {
+            "system": "email",
+            "value": "Vidrio53@Stravenue.com",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "Rufus4305@Stravenue.com",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "Weldon5077@Stravenue.com",
+            "use": "mobile"
+          }                    
+        ],       
+        "gender": "male",
+        "birthDate": "1957-11-29",
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "5462 Circular Pathway"
+            ],
+            "city": "Port Edward",
+            "state": "BC",
+            "postalCode": "V8N 1M6",
+            "country": "CA"
+          },
+          {
+            "type": "postal",
+            "line": [
+              "7807 Stilwell Stravenue"
+            ],
+            "city": "Maple Ridge",
+            "state": "BC",
+            "postalCode": "V8N 1N8",
+            "country": "CA"
+          }          
+        ]
+      }
+    }
+  ]
+}

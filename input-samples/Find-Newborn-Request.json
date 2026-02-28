@@ -1,0 +1,83 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-02-24T11:41:38-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222",
+      "resource": {
+        "resourceType": "Parameters",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "19.HIBC Find Candidates - "
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2026-02-24T11:41:38-08:00"
+          },
+          {
+            "name": "identifiersOnly",
+            "valueBoolean": false
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "value": "HIBC"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+              "value": "username@idir"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+            "value": "XXXXXXXXXX"
+          }
+        ],
+        "patient": {
+        	"reference" : "The newborn."
+        },
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                "code": "NMTH"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

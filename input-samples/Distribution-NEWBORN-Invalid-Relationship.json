@@ -1,0 +1,244 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:1ea458b6-7ebb-42eb-80da-b31b1346efc6"
+    },
+    "type": "collection",
+    "timestamp": "2026-02-26T13:20:43.7850913-08:00",
+    "link": [
+        {
+            "relation": "self",
+            "url": "urn:uuid:3a033379-0366-407b-9a43-86442459ada8"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:3a033379-0366-407b-9a43-86442459ada8",
+            "resource": {
+                "resourceType": "Parameters",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+                    ]
+                },
+                "parameter": [
+                    {
+                        "name": "messageId",
+                        "valueString": "9f5482c62d3e4030b23f1dce2c4923e92"
+                    },
+                    {
+                        "name": "messageDateTime",
+                        "valueDateTime": "2026-02-26T13:08:29-08:00"
+                    },
+                    {
+                        "name": "eventType",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                                    "code": "NEWBORN"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://hd4.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "XXXXXXXXXX",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+                    ]
+                },
+                "contained": [
+                    {
+                        "resourceType": "RelatedPerson",
+                        "identifier": [
+                            {
+                                "use": "official",
+                                "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                                "_value": {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                                            "valueCode": "masked"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "active": true,
+                        "relationship": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                                        "code": "ABCDEFG"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "usual",
+                        "family": "Linsley",
+                        "given": [
+                            "Baby"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "518-287-8547",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "773-872-9732",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "268-460-7125",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Cliff8283@Knoll.com",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Linsley7525@Knoll.com",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Norris6765@Knoll.com",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    }
+                ],
+                "gender": "unknown",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T13:08:29-08:00"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "2026-02-26",
+                "_birthDate": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T13:08:29-08:00"
+                            }
+                        }
+                    ]
+                },
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "physical",
+                        "line": [
+                            "1455 Merritt Canyon",
+                            "Apt 8336",
+                            "PO Box 5224"
+                        ],
+                        "city": "Hornby Island",
+                        "state": "BC",
+                        "postalCode": "V1M 0A8",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "postal",
+                        "line": [
+                            "3462 Bertita Knoll",
+                            "Suite 578",
+                            "PO Box 6177"
+                        ],
+                        "city": "Malakwa",
+                        "state": "BC",
+                        "postalCode": "V1M 2R2",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T13:08:29-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

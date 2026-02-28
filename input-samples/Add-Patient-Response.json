@@ -1,0 +1,124 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-add-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:16a7d454-86da-4cde-9e63-7f88f56658e8"
+   },
+   "type" : "collection",
+   "timestamp" : "2026-02-24T13:12:10.2555106-08:00",
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:af3d9573-8792-4b96-a8fb-04abc585765f"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/$AddPatient"
+      }
+   ],
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:423f1ecb-73bd-410f-a93b-907a9f0b2f65",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "25. Force Create - 2026-02-24T12:10:51-08:00"
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-02-24T12:10:51-08:00"
+               },
+               {
+                  "name" : "requestMessageId",
+                  "valueString" : "af3d9573-8792-4b96-a8fb-04abc585765f"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:af3d9573-8792-4b96-a8fb-04abc585765f",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.RP.0.0000"
+                        }
+                     ],
+                     "text" : "Transaction processed.A new PHN was assigned."
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "outcome"
+         }
+      },
+      {
+         "fullUrl" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXX",
+         "resource" : {
+            "resourceType" : "Patient",
+            "id" : "XXXXXXXXX",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T12:10:51-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "MOH Client Registry - MOH_CRS"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-eweb-phn-source-patient-id",
+                  "value" : "XXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T12:10:51-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "EWEB_PHN - External Web User"
+                  }
+               }
+            ],
+            "active" : true
+         }
+      }
+   ]
+}

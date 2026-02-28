@@ -16,6 +16,7 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.context.support.DefaultProfileValidationSupport;
 import ca.uhn.fhir.validation.FhirValidator;
 import ca.uhn.fhir.validation.ValidationResult;
+import hlth.gov.bc.ca.hapiValidator.util.CustomStructureDefinitionValidationSupport;
 
 @Service
 public class HAPIValidatorService {
@@ -61,7 +62,8 @@ public class HAPIValidatorService {
             new DefaultProfileValidationSupport(fhirContext),
             new InMemoryTerminologyServerValidationSupport(fhirContext),
             new CommonCodeSystemsTerminologyService(fhirContext),
-            new RemoteTerminologyServiceValidationSupport(fhirContext, "https://terminology.hlth.gov.bc.ca/ClientRegistry/")
+            new RemoteTerminologyServiceValidationSupport(fhirContext, "https://terminology.hlth.gov.bc.ca/ClientRegistry/"),
+            new CustomStructureDefinitionValidationSupport(fhirContext)
         );
     }
 

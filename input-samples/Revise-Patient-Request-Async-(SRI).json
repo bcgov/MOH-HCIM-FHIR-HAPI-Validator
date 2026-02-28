@@ -1,0 +1,147 @@
+{
+  "resourceType": "Bundle",
+  "id": "Bundle-RevisePatient-Request-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-02-24T11:36:01-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$RevisePatient"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "Parameters-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "bf3d336689c44c388e33e150b04e1420"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2026-02-24T11:36:01-08:00"
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "value": "FHA"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+              "value": "username@idir"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+            "value": "346060710199584703"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": "Connolly",
+            "given": [
+              "Mitchell",
+              "Valentine",
+              "Laurence"
+            ]
+          },
+          {
+            "use": "nickname",
+            "given": [
+              "Benito"
+            ]
+          }          
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "4418299848",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "3304289643",
+            "use": "work"
+          },
+          {
+            "system": "phone",
+            "value": "4765591545",
+            "use": "mobile"
+          },                    
+          {
+            "system": "email",
+            "value": "Connolly4927@Pathway.com",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "Mitchell4299@Pathway.com",
+            "use": "work"
+          },
+          {
+            "system": "email",
+            "value": "Valentine3487@Pathway.com",
+            "use": "mobile"
+          }                    
+        ],       
+        "gender": "male",
+        "birthDate": "1957-10-10",
+        "address": [
+          {
+            "type": "physical",
+            "line": [
+              "2372 Sears Row"
+            ],
+            "city": "New Denver",
+            "state": "BC",
+            "postalCode": "V8N 2A7",
+            "country": "CA"
+          },
+          {
+            "type": "postal",
+            "line": [
+              "2114 Brush Pathway"
+            ],
+            "city": "Revelstoke",
+            "state": "BC",
+            "postalCode": "V5K 1S1",
+            "country": "CA"
+          }          
+        ]
+      }
+    }
+  ]
+}

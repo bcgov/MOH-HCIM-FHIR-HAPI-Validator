@@ -1,0 +1,50 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-async-ack-response-bundle"
+      ]
+   },
+   "type" : "collection",
+   "timestamp" : "2026-02-24T12:36:11.4571198-08:00",
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:f0a51086-96e4-4257-bb4e-c1274d5c0da0",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameter-async-response"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "bf3d336689c44c388e33e150b04e1420FHIR"
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-02-24T11:36:01-08:00"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:f72ed862-bbf5-4f72-a9d1-a069e1fe3767",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes"
+                        }
+                     ]
+                  }
+               }
+            ]
+         }
+      }
+   ]
+}

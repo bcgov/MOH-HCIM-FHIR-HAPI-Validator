@@ -1,0 +1,242 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:31b43652-ff15-4d6a-82b6-addb0fed593e"
+    },
+    "type": "collection",
+    "timestamp": "2026-02-26T11:35:41.9905823-08:00",
+    "link": [
+        {
+            "relation": "self",
+            "url": "urn:uuid:147b2f29-8d3f-4c10-b90e-00731d0818fd"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:147b2f29-8d3f-4c10-b90e-00731d0818fd",
+            "resource": {
+                "resourceType": "Parameters",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+                    ]
+                },
+                "parameter": [
+                    {
+                        "name": "messageId",
+                        "valueString": "680994b2c2e444af93dba44ca3a2b05f2"
+                    },
+                    {
+                        "name": "messageDateTime",
+                        "valueDateTime": "2026-02-26T11:23:14-08:00"
+                    },
+                    {
+                        "name": "eventType",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                                    "code": "COMP"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://hd4.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "XXXXXXXXXX",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T11:21:14-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-vgh-source-patient-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        },
+                        "assigner": {
+                            "display": "VCHA IDX Carecast - VCHA_VGH"
+                        }
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "usual",
+                        "family": "Lemons",
+                        "given": [
+                            "Hyman",
+                            "Nathan",
+                            "Elroy"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T11:21:14-08:00"
+                        }
+                    },
+                    {
+                        "use": "nickname",
+                        "given": [
+                            "Cornelius"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        }
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "992-814-6927",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "263-500-7861",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "264-637-1517",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Nathan7682@Parade.com",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Lemons1953@Parade.com",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Hyman9793@Parade.com",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T11:23:14-08:00"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T11:23:14-08:00"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "1971-04-04",
+                "_birthDate": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T11:23:14-08:00"
+                            }
+                        }
+                    ]
+                },
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "invalid"
+                            }
+                        ],
+                        "type": "physical",
+                        "line": [
+                            "8178 Clementina Walk",
+                            "Suite 5558",
+                            "PO Box 5341"
+                        ],
+                        "city": "Hedley",
+                        "state": "BC",
+                        "postalCode": "V7G 1K2",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T11:24:14-08:00"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "invalid"
+                            }
+                        ],
+                        "type": "postal",
+                        "line": [
+                            "8608 Pasadena Parade",
+                            "Suite 7338",
+                            "PO Box 8550"
+                        ],
+                        "city": "Kitimat",
+                        "state": "BC",
+                        "postalCode": "V5K 1H6",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T11:24:14-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

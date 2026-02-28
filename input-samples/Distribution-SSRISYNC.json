@@ -1,0 +1,242 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:356ca6d4-0ae0-470a-952d-c75b40b5c0fd"
+    },
+    "type": "collection",
+    "timestamp": "2026-02-26T11:40:25.3576846-08:00",
+    "link": [
+        {
+            "relation": "self",
+            "url": "urn:uuid:9eceeaad-ee08-4860-9b68-40808b079a1d"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:9eceeaad-ee08-4860-9b68-40808b079a1d",
+            "resource": {
+                "resourceType": "Parameters",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+                    ]
+                },
+                "parameter": [
+                    {
+                        "name": "messageId",
+                        "valueString": "228b7d87ae5044dda997b529def73cbc"
+                    },
+                    {
+                        "name": "messageDateTime",
+                        "valueDateTime": "2026-02-26T11:25:12-08:00"
+                    },
+                    {
+                        "name": "eventType",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                                    "code": "SSRISYNC"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://hd4.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "XXXXXXXXXX",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-vcha-comm-source-patient-id",
+                        "value": "XXXXXXXXXXXXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        },
+                        "assigner": {
+                            "display": "VCHA PARIS - VCHA_COMM"
+                        }
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "usual",
+                        "family": "McCaffery",
+                        "given": [
+                            "Jarrod",
+                            "Edgardo",
+                            "Korey"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "use": "nickname",
+                        "given": [
+                            "Warren"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "341-840-2291",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "400-842-9082",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "575-442-2582",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Edgardo689@Bypass.com",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "McCaffery4912@Bypass.com",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Jarrod1473@Bypass.com",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T11:25:12-08:00"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "2007-10-28",
+                "_birthDate": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T11:25:12-08:00"
+                            }
+                        }
+                    ]
+                },
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "physical",
+                        "line": [
+                            "285 Larkin Way",
+                            "Apt 2329",
+                            "PO Box 5906"
+                        ],
+                        "city": "Gambier Island",
+                        "state": "BC",
+                        "postalCode": "V1M 1Z4",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "postal",
+                        "line": [
+                            "3880 Krausgrill Bypass",
+                            "Suite 8210",
+                            "PO Box 6352"
+                        ],
+                        "city": "McBride",
+                        "state": "BC",
+                        "postalCode": "V8N 0A3",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T11:25:12-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

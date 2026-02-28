@@ -1,0 +1,124 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:89bf4828-73c6-44d8-9d37-a7d20559a6d7"
+   },
+   "type" : "collection",
+   "timestamp" : "2026-02-24T12:54:12.8957867-08:00",
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:1221eed4-6da9-4221-977c-c669736eea8a"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/$RevisePatient"
+      }
+   ],
+   "entry" : [
+      {
+         "fullUrl" : "urn:uuid:55734585-6723-4fac-8917-29a1c02aaa00",
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageId",
+                  "valueString" : "07.HA Add New Client via HIAL facing secured with SSSRI - 2026-02-24T11:52:23-08:00"
+               },
+               {
+                  "name" : "messageDateTime",
+                  "valueDateTime" : "2026-02-24T10:52:23-08:00"
+               },
+               {
+                  "name" : "requestMessageId",
+                  "valueString" : "1221eed4-6da9-4221-977c-c669736eea8a"
+               }
+            ]
+         }
+      },
+      {
+         "fullUrl" : "urn:uuid:1221eed4-6da9-4221-977c-c669736eea8a",
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "severity" : "information",
+                  "code" : "business-rule",
+                  "details" : {
+                     "coding" : [
+                        {
+                           "system" : "http://hlth.gov.bc.ca/fhir/client/bc-oo-codes",
+                           "code" : "BCHCIM.RP.0.0000"
+                        }
+                     ],
+                     "text" : "Transaction processed.A new PHN was assigned."
+                  }
+               }
+            ]
+         },
+         "search" : {
+            "mode" : "outcome"
+         }
+      },
+      {
+         "fullUrl" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+         "resource" : {
+            "resourceType" : "Patient",
+            "id" : "XXXXXXXXXX",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                  "value" : "XXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T10:52:23-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "MOH Client Registry - MOH_CRS"
+                  }
+               },
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                        "valueCode" : "active"
+                     }
+                  ],
+                  "use" : "official",
+                  "system" : "https://health.gov.bc.ca/fhir/NamingSystem/ca-bc-fha-mt-source-patient-id",
+                  "value" : "XXXXXXXXXXXXXXXXXXXX",
+                  "period" : {
+                     "start" : "2026-02-24T10:52:23-08:00"
+                  },
+                  "assigner" : {
+                     "display" : "FHA Fraser Health Meditech - FHA_MT"
+                  }
+               }
+            ],
+            "active" : true
+         }
+      }
+   ]
+}

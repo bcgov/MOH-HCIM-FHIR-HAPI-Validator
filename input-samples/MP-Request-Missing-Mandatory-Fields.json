@@ -1,0 +1,31 @@
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "target-patient",
+            "valueReference": {
+                "reference": "Patient/f05c807c-955c-4225-9c5a-19bbbc1f3624"
+            }
+        },
+        {
+            "name": "result-patient",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "f05c807c-955c-4225-9c5a-19bbbc1f3624",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                        "valuePeriod": {
+                            "start": "2026-02-24T12:38:50-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

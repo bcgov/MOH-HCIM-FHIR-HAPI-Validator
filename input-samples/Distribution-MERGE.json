@@ -1,0 +1,205 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:0f8b140f-ddbd-4f3c-a33a-9a8ccd6c52bf"
+    },
+    "type": "collection",
+    "timestamp": "2026-02-26T14:02:03.0602887-08:00",
+    "link": [
+        {
+            "relation": "self",
+            "url": "urn:uuid:4fc6a233-390a-456e-b767-cb35609707c5"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:4fc6a233-390a-456e-b767-cb35609707c5",
+            "resource": {
+                "resourceType": "Parameters",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+                    ]
+                },
+                "parameter": [
+                    {
+                        "name": "messageId",
+                        "valueString": "35d535376b214492aa42cd86aab56fec2"
+                    },
+                    {
+                        "name": "messageDateTime",
+                        "valueDateTime": "2026-02-26T13:49:11-08:00"
+                    },
+                    {
+                        "name": "eventType",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                                    "code": "MERGE"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://hd4.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "XXXXXXXXXX",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T13:47:11-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "merged"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T13:49:11-08:00",
+                            "end": "2026-02-26T14:01:57-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "usual",
+                        "family": "Graff",
+                        "given": [
+                            "Porfirio"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T13:49:11-08:00"
+                        }
+                    },
+                    {
+                        "use": "nickname",
+                        "given": [
+                            "Lawrence"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T13:49:11-08:00"
+                        }
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "313-995-9150",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T13:49:11-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Porfirio7869@Crescent.com",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T13:49:11-08:00"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T13:49:11-08:00"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "2007-06-29",
+                "_birthDate": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T13:49:11-08:00"
+                            }
+                        }
+                    ]
+                },
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "invalid"
+                            }
+                        ],
+                        "type": "physical",
+                        "line": [
+                            "Rural Route 4699"
+                        ],
+                        "city": "Cassiar",
+                        "state": "BC",
+                        "postalCode": "V1M 2H6",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T13:50:11-08:00"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "invalid"
+                            }
+                        ],
+                        "type": "postal",
+                        "line": [
+                            "Rural Route 7850"
+                        ],
+                        "city": "Telkwa",
+                        "state": "BC",
+                        "postalCode": "V3R 1G2",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T13:50:11-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
