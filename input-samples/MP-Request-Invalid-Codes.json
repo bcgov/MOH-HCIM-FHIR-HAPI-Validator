@@ -1,0 +1,55 @@
+{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "target-patient",
+            "valueReference": {
+                "reference": "Patient/f05c807c-955c-4225-9c5a-19bbbc1f3624",
+                "identifier": {
+                    "use": "usual",
+                    "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id",
+                    "value": "XXXXXXXXXX"
+                }
+            }
+        },
+        {
+            "name": "source-patient",
+            "valueReference": {
+                "reference": "Patient/d148488d-702a-4824-979a-9d28a05336d4",
+                "identifier": {
+                    "use": "merged",
+                    "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id",
+                    "value": "XXXXXXXXXX"
+                }
+            }
+        },
+        {
+            "name": "result-patient",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "f05c807c-955c-4225-9c5a-19bbbc1f3624",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-merge-patient"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                        "valuePeriod": {
+                            "start": "2026-02-24T12:38:50-08:00"
+                        }
+                    }
+                ],
+                "link": [
+                    {
+                        "other": {
+                            "reference": "Patient/d148488d-702a-4824-979a-9d28a05336d4"
+                        },
+                        "type": "unknown"
+                    }
+                ]
+            }
+        }
+    ]
+}

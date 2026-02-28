@@ -1,0 +1,54 @@
+{
+  "resourceType": "Bundle",
+  "id": "Bundle-GetDemographics-Request-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-get-demographics-request-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-02-24T11:36:01-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$GetDemographics"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "Parameters-GetDemographics-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "bf3d336689c44c388e33e150b04e1420"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2026-02-24T11:36:01-08:00"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-By-Example-GD-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": []
+      }
+    }
+  ]
+}

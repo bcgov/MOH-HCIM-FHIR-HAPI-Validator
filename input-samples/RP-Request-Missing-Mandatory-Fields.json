@@ -1,0 +1,97 @@
+{
+  "resourceType": "Bundle",
+  "id": "Bundle-RevisePatient-Request-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"
+    ]
+  },
+  "timestamp": "2026-02-24T11:36:27-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$RevisePatient"
+    }
+  ],
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "Parameters-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageDateTime"
+          },
+          {
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "value": "HIBC"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-userid"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official"
+          }
+        ],
+        "name": [
+          {
+            "family": "Howland"
+          },
+          {
+            "use": "nickname"
+          }          
+        ],
+        "telecom": [
+          {
+            "system": "phone"
+          },
+          {
+            "value": "6433585873"
+          },
+          {
+            "use": "mobile"
+          },                    
+          {
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "1118 Paradise Grade"
+            ],
+            "city": "Tumbler Ridge",
+            "state": "BC",
+            "postalCode": "V8N 1V3",
+            "country": "CA"
+          },
+          {
+            "type": "postal"
+          }          
+        ]
+      }
+    }
+  ]
+}

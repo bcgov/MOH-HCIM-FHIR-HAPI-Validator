@@ -1,0 +1,227 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-subscription-notification-bundle"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:afd6d3d5-2469-4c11-a2b5-9eeb5306e72d"
+    },
+    "type": "collection",
+    "timestamp": "2026-02-26T13:31:31.3864686-08:00",
+    "link": [
+        {
+            "relation": "self",
+            "url": "urn:uuid:2245d37d-7064-47af-8d67-803020a65d37"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:2245d37d-7064-47af-8d67-803020a65d37",
+            "resource": {
+                "resourceType": "Parameters",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-subscription"
+                    ]
+                },
+                "parameter": [
+                    {
+                        "name": "messageId",
+                        "valueString": "9ffc0a3dbb9a452e8ba1a9498d167d9a2"
+                    },
+                    {
+                        "name": "messageDateTime",
+                        "valueDateTime": "2026-02-26T13:19:02-08:00"
+                    },
+                    {
+                        "name": "eventType",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://terminology.hlth.gov.bc.ca/ClientRegistry/CodeSystem/bc-client-registry-patient-change-notification-events",
+                                    "code": "DEATH"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://hd4.hcim.ehealth.gov.bc.ca/Patient/XXXXXXXXXX",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "XXXXXXXXXX",
+                "meta": {
+                    "profile": [
+                        "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension",
+                                "valueCode": "active"
+                            }
+                        ],
+                        "use": "official",
+                        "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+                        "value": "XXXXXXXXXX",
+                        "period": {
+                            "start": "2026-02-26T13:17:02-08:00"
+                        },
+                        "assigner": {
+                            "display": "MOH Client Registry - MOH_CRS"
+                        }
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "usual",
+                        "family": "Alejandro",
+                        "given": [
+                            "Rodolfo",
+                            "Jackie",
+                            "Wiley"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    },
+                    {
+                        "use": "nickname",
+                        "given": [
+                            "Tory"
+                        ],
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "value": "7858069712",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "3452121453",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    },
+                    {
+                        "system": "phone",
+                        "value": "5772784671",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Jackie8526@Expressway.com",
+                        "use": "mobile",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Alejandro462@Expressway.com",
+                        "use": "home",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    },
+                    {
+                        "system": "email",
+                        "value": "Rodolfo9616@Expressway.com",
+                        "use": "work",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    }
+                ],
+                "gender": "male",
+                "_gender": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T13:19:02-08:00"
+                            }
+                        }
+                    ]
+                },
+                "birthDate": "1976-12-24",
+                "_birthDate": {
+                    "extension": [
+                        {
+                            "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-business-period-extension",
+                            "valuePeriod": {
+                                "start": "2026-02-26T13:19:02-08:00"
+                            }
+                        }
+                    ]
+                },
+                "deceasedDateTime": "2026-02-26",
+                "_deceasedDateTime": {},
+                "address": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "physical",
+                        "line": [
+                            "2620 Donner Lane",
+                            "Suite 8845",
+                            "PO Box 2190"
+                        ],
+                        "city": "Langford",
+                        "state": "BC",
+                        "postalCode": "V3R 0W8",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-validation-status-extension",
+                                "valueCode": "unknown"
+                            }
+                        ],
+                        "type": "postal",
+                        "line": [
+                            "7935 Pearl Expressway",
+                            "Rural Route 7241",
+                            "PO Box 7084"
+                        ],
+                        "city": "Edgewood",
+                        "state": "BC",
+                        "postalCode": "V7G 1N7",
+                        "country": "CA",
+                        "period": {
+                            "start": "2026-02-26T13:19:02-08:00"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

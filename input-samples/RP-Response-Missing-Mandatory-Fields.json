@@ -1,0 +1,88 @@
+{
+   "resourceType" : "Bundle",
+   "meta" : {
+      "profile" : [
+         "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-response-bundle"
+      ]
+   },
+   "identifier" : {
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:873aaf29-a68c-44dd-b123-ccfc905c3a7e"
+   },
+   "type" : "collection",
+   "timestamp" : "2026-02-24T12:36:30.1297122-08:00",
+   "link" : [
+      {
+         "relation" : "self",
+         "url" : "urn:uuid:27d4e16e-bff1-47bc-9c60-88a567bf4c69"
+      },
+      {
+         "relation" : "canonical",
+         "url" : "http://hsitbroker.hcim.ehealth.gov.bc.ca/Patient/$RevisePatient"
+      }
+   ],
+   "entry" : [
+      {
+         "resource" : {
+            "resourceType" : "Parameters",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-out"
+               ]
+            },
+            "parameter" : [
+               {
+                  "name" : "messageDateTime"
+               },
+               {
+                  "valueString" : "27d4e16e-bff1-47bc-9c60-88a567bf4c69"
+               }
+            ]
+         }
+      },
+      {
+         "resource" : {
+            "resourceType" : "OperationOutcome",
+            "issue" : [
+               {
+                  "details" : {
+                     "coding" : [
+                        {}
+                     ]
+                  }
+               }
+            ]
+         },
+         "search" : {
+         }
+      },
+      {
+         "resource" : {
+            "resourceType" : "Patient",
+            "meta" : {
+               "profile" : [
+                  "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+               ]
+            },
+            "identifier" : [
+               {
+                  "extension" : [
+                     {
+                        "url" : "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-identifier-status-extension"
+                     }
+                  ],
+                  "period" : {},
+                  "assigner" : {}
+               },
+               {
+                  "extension" : [
+                     {
+                        "valueCode" : "active"
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   ]
+}

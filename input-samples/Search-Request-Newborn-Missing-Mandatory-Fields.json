@@ -1,0 +1,31 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-find-candidates-request-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-02-24T11:41:38-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$FindCandidates"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f1111",
+      "resource": {
+        "resourceType": "RelatedPerson",
+        "identifier": [
+          {
+            "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id",
+            "value": "XXXXXXXXXX"
+          }
+        ],
+        "patient": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "resourceType": "Bundle",
+  "id": "Bundle-RevisePatient-Request-Example",
+  "meta": {
+    "profile": [
+      "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-revise-request-bundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2026-02-24T11:36:27-08:00",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hlth.gov.bc.ca/fhir/client/Patient/$RevisePatient"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f2222",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "Parameters-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-metadata-parameters-in"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "messageId",
+            "valueString": "10.Create a PHNBound record HIAL Services - 2026-02-24T11:36:27-08:00"
+          },
+          {
+            "name": "messageDateTime",
+            "valueDateTime": "2026-02-24T10:36:27-08:00"
+          },
+          {
+            "name": "sender",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-org",
+              "value": "HIBC"
+            }
+          },
+          {
+            "name": "enterer",
+            "valueIdentifier": {
+              "system": "http://hlth.gov.bc.ca/fhir/client/bc-userid",
+              "value": "username@idir"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e770dd20-7fe9-406f-a57c-52ed466f4444",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient-RevisePatient-Example",
+        "meta": {
+          "profile": [
+            "http://hlth.gov.bc.ca/fhir/client/StructureDefinition/bc-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id",
+            "_value": {
+            	"extension":[
+            	  {
+            	  	"url": "http://hl7.org/fhir/valueset-data-absent-reason.html",
+            	  	"valuecode": "asked-unknown"
+            	  }
+            	]
+            }
+          },
+          {
+            "use": "anidentifier",
+            "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-msp-eligibility-id",
+            "_value": {
+            	"extension":[
+            	  {
+            	  	"url": "http://hl7.org/fhir/valueset-data-absent-reason.html",
+            	  	"valuecode": "incorrect"
+            	  }
+            	]
+            }
+          }
+        ],
+        "name": [
+          {
+            "use": "temp",
+            "family": "Howland",
+            "given": [
+              "Elias",
+              "Alexis",
+              "Wilbur"
+            ]
+          },
+          {
+            "use": "typeofname",
+            "given": [
+              "Dominique"
+            ]
+          }          
+        ],
+        "telecom": [
+          {
+            "system": "fax",
+            "value": "7057585987",
+            "use": "home"
+          },
+          {
+            "system": "pager",
+            "value": "6433585873",
+            "use": "work"
+          },
+          {
+            "system": "url",
+            "value": "7283723344",
+            "use": "temp"
+          },                    
+          {
+            "system": "sms",
+            "value": "Howland6945@Nene.com",
+            "use": "old"
+          },
+          {
+            "system": "other",
+            "value": "Elias7927@Nene.com",
+            "use": "other"
+          },
+          {
+            "system": "somethingelse",
+            "value": "Alexis8964@Nene.com",
+            "use": "someotherthing"
+          }                    
+        ],       
+        "gender": "undetermined",
+        "birthDate": "1951-12-19",
+        "address": [
+          {
+            "type": "both",
+            "line": [
+              "1118 Paradise Grade"
+            ],
+            "city": "Tumbler Ridge",
+            "state": "BC",
+            "postalCode": "V8N 1V3",
+            "country": "CA"
+          },
+          {
+            "type": "neither",
+            "line": [
+              "1652 Vulcan Nene"
+            ],
+            "city": "Cobble Hill",
+            "state": "BC",
+            "postalCode": "V3R 1H9",
+            "country": "CA"
+          }          
+        ]
+      }
+    }
+  ]
+}
